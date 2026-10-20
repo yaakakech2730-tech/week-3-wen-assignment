@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise | Budget Tracker</title>
+
+    <!-- Week 3: Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="page-header">
+        <div class="brand">
+            <img
+                class="brand-logo"
+                src="https://cdn-icons-png.flaticon.com/512/2830/2830284.png"
+                alt="SpendWise logo"
+                width="48"
+            >
+            <span class="brand-name">SpendWise</span>
+        </div>
+        <p class="header-tagline">Make every shilling count.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome-section">
+            <p class="eyebrow">YOUR PERSONAL FINANCE SPACE</p>
+            <h1>My Budget Tracker</h1>
+            <p class="welcome-copy">
+                Track your expenses, understand your spending,
+                and build better money habits.
+            </p>
+        </section>
+
+        <!-- Week 1 and Week 2: Expense form -->
+        <section class="add-expense-section panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Add Expense</h2>
+                    <p>Record a purchase or payment.</p>
+                </div>
+                <span class="section-icon">+</span>
+            </div>
+
+            <form id="expense-form">
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="expense-name">Expense Name</label>
+                        <input
+                            type="text"
+                            id="expense-name"
+                            name="expense-name"
+                            placeholder="e.g. Groceries"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense-amount">Amount (KSh)</label>
+                        <input
+                            type="number"
+                            id="expense-amount"
+                            name="expense-amount"
+                            min="0"
+                            step="0.01"
+                            placeholder="e.g. 1500"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense-category">Category</label>
+                        <select id="expense-category" name="expense-category">
+                            <option value="">Choose a category</option>
+                            <option value="Food">Food</option>
+                            <option value="Transport">Transport</option>
+                            <option value="Rent">Rent</option>
+                            <option value="Entertainment">Entertainment</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expense-date">Date</label>
+                        <input
+                            type="date"
+                            id="expense-date"
+                            name="expense-date"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="button" class="primary-button">
+                    Add Expense
+                </button>
+            </form>
+        </section>
+
+        <!-- Week 2: Expense table with five sample records -->
+        <section class="expenses-section panel">
+            <div class="section-heading">
+                <div>
+                    <h2>Your Expenses</h2>
+                    <p>A record of your recent spending.</p>
+                </div>
+                <span class="sample-badge">Sample data</span>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Amount (KSh)</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Groceries</td>
+                            <td>1,500.00</td>
+                            <td><span class="category food">Food</span></td>
+                            <td>2026-10-16</td>
+                        </tr>
+                        <tr>
+                            <td>Bus fare</td>
+                            <td>300.00</td>
+                            <td><span class="category transport">Transport</span></td>
+                            <td>2026-10-17</td>
+                        </tr>
+                        <tr>
+                            <td>House rent</td>
+                            <td>4,000.00</td>
+                            <td><span class="category rent">Rent</span></td>
+                            <td>2026-10-18</td>
+                        </tr>
+                        <tr>
+                            <td>Football match</td>
+                            <td>500.00</td>
+                            <td><span class="category entertainment">Entertainment</span></td>
+                            <td>2026-10-19</td>
+                        </tr>
+                        <tr>
+                            <td>Soap and toiletries</td>
+                            <td>250.00</td>
+                            <td><span class="category other">Other</span></td>
+                            <td>2026-10-20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Week 2: Expandable help section -->
+        <section class="help-section panel">
+            <details>
+                <summary>How to use this tracker</summary>
+                <div class="details-content">
+                    <p>
+                        Enter the expense name, amount, category, and date
+                        in the form above.
+                    </p>
+                    <p>
+                        The table currently contains sample expenses.
+                        Adding and saving new expenses will require
+                        JavaScript in a later stage.
+                    </p>
+                </div>
+            </details>
+        </section>
+
+        <!-- Week 2: Image -->
+        <section class="learning-section panel">
+            <h2>Build Better Money Habits</h2>
+            <p class="section-description">
+                Small steps today can help you manage your money better.
+            </p>
+
+            <img
+                class="budget-image"
+                src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=1000&q=80"
+                alt="Coins and savings for financial planning"
+                width="600"
+                loading="lazy"
+            >
+        </section>
+
+        <!-- Week 2: Embedded video -->
+        <section class="video-section panel">
+            <h2>Keep Learning</h2>
+            <p class="section-description">
+                Watch this HTML tutorial as you continue learning.
+            </p>
+
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE"
+                    title="HTML tutorial for beginners"
+                    width="560"
+                    height="315"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>SpendWise &copy; 2026</p>
+        <p>Make every shilling count.</p>
+    </footer>
+
+</body>
+</html>
